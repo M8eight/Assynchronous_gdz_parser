@@ -13,13 +13,13 @@ $("#submit").click(function (button) {
         'book': bookParam,
         'number': numberParam
     });
-
     //replace send button to 'loading' button
     {
         $('#submit').text(' Loading');
         $('#submit').addClass('disabled');
         $('#submit').append(' <span class="spinner-grow spinner-grow-sm text-success" role="status " aria-hidden="true"></span>');    
     }
+
 
     $.ajax({
         type: "POST",
@@ -30,10 +30,15 @@ $("#submit").click(function (button) {
             "Content-Type": "application/json"
         }
     }).done(function (response) {
+
         //return send button
         $('#submit').empty();
         $('#submit').text('Send');
         $('#submit').removeClass('disabled');
+
+        if ($('#imgContainer').has('div')) {
+            $('#imgContainer').empty();
+        }
 
         if (response.hasOwnProperty('error')) {
             // $('#imgContainer').append($('#imgContainer').innerHTML = '<h3 class="text-danger">Error, see cause ↓</h3>');

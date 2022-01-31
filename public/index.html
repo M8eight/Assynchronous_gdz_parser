@@ -33,8 +33,22 @@
                       </select>
                     <input placeholder="Номер" class="form-control" aria-label="Username"
                         aria-describedby="basic-addon1" type="text" name="number" /> <br>
-                    <button class="btn btn-info text-white" type="submit" id="submit">Send</button>  
+                    <row>
+                        <button class="btn btn-info text-white" type="submit" id="submit">Send</button>  
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Notation</button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">Notation</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            This application makes a request to the site gdz.ru, and returns json which processes the site itself and creates images
+                        </div>
+                        </div>
+                    </row>
                 </form>
+
+
 
             </div>
             <div class="col-2"></div>
