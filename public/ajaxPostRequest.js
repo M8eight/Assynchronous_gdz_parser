@@ -1,6 +1,4 @@
 $("#submit").click(function (button) {
-    //take div in which we will put pictures and info and warning
-    var imgContainer = $('#imgContainer');
     //reset sent property button
     button.preventDefault();
     //if there is any data in the container, then we clear it
