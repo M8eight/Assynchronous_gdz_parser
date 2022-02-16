@@ -5,7 +5,7 @@
 */
 
 //init crawler module
-let parser = require("./lib/parser.js");
+let parser = require("./lib/requestHandler.js");
 const express = require("express"); //framework
 const app = express(); 
 
