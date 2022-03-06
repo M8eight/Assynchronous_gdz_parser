@@ -23,18 +23,18 @@
             <div class="col-8">
 
                 <h1 class="text-center">Gdz parser</h1>
-                <form name="parseBook">
+                <div name="parseBook">
                     <select name="book" style="margin-bottom: 8px;" class="form-select">
-                        <option selected="selected">Select book</option>
+                        <option value="not" selected="selected">Select book</option>
                         <option value="alg9">Algebra</option>
                         <option value="eng9">English</option>
                         <option value="obs9">Obshestvoznanie</option>
                         <option value="his9">History</option>
                         <option value="geom9">Geometry</option>
                       </select>
-                    <input placeholder="Номер" class="form-control" aria-label="Username"
+                    <input placeholder="Number" class="form-control" aria-label="Username"
                         aria-describedby="basic-addon1" type="text" name="number" /> <br>
-                    <row>
+                    <row id="buttonBlock">
                         <button class="btn btn-info text-white" type="submit" id="submit">Send</button>  
                         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Notation</button>
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -46,11 +46,13 @@
                             This application makes a request to the site gdz.ru, and returns json which processes the site itself and creates images
                         </div>
                         </div>
+                        <div class="buttonPlace">
+                            <br>
+                            <span id="leftArrow"></span>
+                            <span id="rightArrow"></span>
+                        </div>
                     </row>
-                </form>
-
-
-
+                </div>
             </div>
             <div class="col-2"></div>
         </div>

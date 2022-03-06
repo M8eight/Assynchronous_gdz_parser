@@ -1,12 +1,24 @@
 {
-    "name": "expressapp",
+    "name": "gdz-parser",
     "version": "1.0.0",
     "dependencies": {
         "axios": "^0.25.0",
+        "chalk": "4.1",
         "express": "^4.16.4",
         "node-html-parser": "^5.2.0"
     },
     "devDependencies": {
         "eslint": "^8.9.0"
+    },
+    "cspell": {
+        "version": "0.2",
+        "ignorePaths": [],
+        "dictionaryDefinitions": [],
+        "dictionaries": [],
+        "words": [
+            "Obshestvoznanie"
+        ],
+        "ignoreWords": [],
+        "import": []
     }
 }
