@@ -1,3 +1,5 @@
+Version 3.1.0
+
 How to use:
     -open command prompt in this directory
     -run command "npm install" (if you don`t have node.js so, I can only sympathize with you)
