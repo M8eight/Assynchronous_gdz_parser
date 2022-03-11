@@ -21,7 +21,6 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-
                 <h1 class="text-center">Gdz parser</h1>
                 <div name="parseBook">
                     <select name="book" style="margin-bottom: 8px;" class="form-select">
@@ -34,37 +33,65 @@
                       </select>
                     <input placeholder="Number" class="form-control" aria-label="Username"
                         aria-describedby="basic-addon1" type="text" name="number" /> <br>
-                    <row id="buttonBlock">
-                        <button class="btn btn-info text-white" type="submit" id="submit">Send</button>  
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Notation</button>
+                    <div id="buttonBlock">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-success text-white" type="submit" id="submit">Send</button>  
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Notation</button>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasRightLabel">Notation</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">Notation</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <a href="http://gdz.ru" target="_blank" class="btn btn-secondary mb-2 px-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-5.904-2.803a.5.5 0 1 1 .707.707L6.707 10h2.768a.5.5 0 0 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.525a.5.5 0 0 1 1 0v2.768l4.096-4.096z"/>
+                                    </svg>
+                                    Gdz.ru href
+                                </a> <br>
+                                This application makes a request to the sites, and returns json which processes and creates images
+                            </div>
                         </div>
-                        <div class="offcanvas-body">
-                            This application makes a request to the site gdz.ru, and returns json which processes the site itself and creates images
-                        </div>
-                        </div>
+
                         <div class="buttonPlace">
-                            <br>
-                            <span id="leftArrow"></span>
-                            <span id="rightArrow"></span>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-4">
+                                    <span id="leftArrow"></span>
+                                </div>
+                                <div class="col-4">
+                                    <span id="rightArrow"></span>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
                         </div>
-                    </row>
+
+                    </div>
                 </div>
             </div>
             <div class="col-2"></div>
         </div>
-
         <br>
+    </div>
 
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div id="imgContainer"></div>
             </div>
         </div>
     </div>
+    
 
     <script src="ajaxPostRequest.js" async></script>
 </body>
