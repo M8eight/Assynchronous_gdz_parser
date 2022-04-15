@@ -1,15 +1,11 @@
-module.exports.checkForm = checkForm;
+import { urlCondDebug, printCondDebug } from "./../handlers/debug.js";
 
-const chalk = require("chalk");
-const process = require("process");
-
-const commandArgs = process.argv[2];
-
-function checkForm(number, book) {
+export default function checkForm(number, book) {
     number = parseInt(number);
-    if (commandArgs == "url") console.log(chalk.blue("Go to checkForm.js"));
-    if (commandArgs == "url") console.log("🚀 ~ file: serverMainCheckup.js ~ line 7 ~ checkForm ~ number", number);
-    if (commandArgs == "url") console.log("🚀 ~ file: serverMainCheckup.js ~ line 9 ~ checkForm ~ book", book);
+
+    urlCondDebug("Go to checkForm.js");
+    printCondDebug("number", number);
+    printCondDebug("book", book);
 
     var part = undefined;
     var url = undefined;
@@ -58,6 +54,10 @@ function checkForm(number, book) {
         url = `https://gdz.ru/class-9/algebra/dorofeev/${number}-nom/`;
     }
 
-    if (commandArgs == "url") console.log("🚀 ~ file: serverMainCheckup.js ~ line 73 ~ checkForm ~ url", url);
-    return url;
+    printCondDebug("url", url);
+    if (url === undefined) {
+        return false
+    } else {
+        return url;
+    }
 }
