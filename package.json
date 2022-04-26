@@ -1,14 +1,30 @@
 {
-	"name": "gdz-parser",
-	"version": "1.0.0",
-	"type": "module",
-	"dependencies": {
-		"chalk": "4.1",
-		"express": "^4.16.4",
-		"node-html-parser": "^5.2.0",
-		"puppeteer": "^13.5.2"
-	},
-	"devDependencies": {
-		"eslint": "^8.9.0"
-	}
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  },
+  "name": "mega-super-gdz",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M8eight/MegaSuperGdz.git"
+  },
+  "keywords": [
+    "parser",
+    "gdz"
+  ],
+  "author": "m8eight",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M8eight/MegaSuperGdz/issues"
+  },
+  "homepage": "https://github.com/M8eight/MegaSuperGdz#readme",
+  "description": "",
+  "type": "module"
 }

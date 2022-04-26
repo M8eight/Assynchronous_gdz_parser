@@ -1,0 +1,50 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title GdzParser
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC", crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+    body 
+        .container
+            .row
+                .col-8
+                h1.text-center Gdz parser
+                div(name='parseBook')
+                    select.form-select(name='book' style='margin-bottom: 8px;')
+                        option(value='not' selected='selected') Select book
+                        //add book is here
+                        //-------------------------
+                        option(value='alg9') Алгебра
+                        option(value='eng9') Английский
+                        option(value='obs9') Обществознание
+                        option(value='his9') История
+                        option(value='geom9') Геометрия
+                        //-------------------------
+                    input.form-control(placeholder='Number' aria-label='Username' aria-describedby='basic-addon1' type='text' name='number')
+            br
+            .row
+                .col-3
+                .col-6
+                    #buttonBlock
+                        .row
+                            .d-grid.gap-2
+                                button#submit.btn.btn-success.text-white(type='submit') Send
+                .col-3
+                .buttonPlace
+                    .row
+                    .col-2
+                    .col-4
+                        span#leftArrow
+                    .col-4
+                        span#rightArrow
+                    .col-2
+            br
+            .container-fluid
+            .row.justify-content-center
+                .col-12
+                #imgContainer
+        script(src='js/ajaxPostRequest.js')
