@@ -1,5 +1,6 @@
 import UrlsRequestController from "./controllers/UrlsRequestController.js";
 import ArrowController from "./controllers/ArrowController.js";
+import { text } from "./helpers/formatText.js";
 
 import express from "express";
 
@@ -41,5 +42,5 @@ app.post("/arrows", jsonParser, function (req, res) {
 });
 
 app.listen(3000, "127.0.0.1", function () {
-	console.log("Server has started");
+	console.log(text("Server has started"));
 });
