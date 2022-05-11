@@ -7,7 +7,7 @@
     "pug": "^3.0.2"
   },
   "name": "mega-super-gdz",
-  "version": "4.0.1",
+  "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index",
